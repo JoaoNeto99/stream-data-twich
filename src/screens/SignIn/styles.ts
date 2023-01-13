@@ -22,13 +22,13 @@ export const LoginBanner = styled.View`
   width: 100%;
 
   background-color: ${props => props.theme.colors.purple};
-  padding: ${getStatusBarHeight(true) + 60}px 40px 60px;
+  padding: ${getStatusBarHeight(true) + 30}px 40px 30px;
 `;
 
 export const LoginInfo = styled.View`
   flex: 1;
   width: 100%;
-  padding: 48px 32px ${getBottomSpace() + 48}px;
+  padding: 35px 32px ${getBottomSpace() + 40}px;
 `;
 
 export const Header = styled.View`
