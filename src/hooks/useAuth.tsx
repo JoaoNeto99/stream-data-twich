@@ -46,7 +46,7 @@ function AuthProvider({children}: AuthProviderData) {
             setIsLoggingIn(true)
 
             const REDIRECT_URI = makeRedirectUri({useProxy: true})
-           // const REDIRECT_URI = "https://auth.expo.io/@joaoneto7499/streamdata"
+            //const REDIRECT_URI = "https://auth.expo.io/@joaoneto7499/streamdata"
             const RESPONSE_TYPE = "token"
             const SCOPE = encodeURI("openid user:read:email user:read:follows")
             const FORCE_VERIFY = true
@@ -114,7 +114,11 @@ function AuthProvider({children}: AuthProviderData) {
     }
 
     useEffect(() => {
-        api.defaults.headers.common['Client-Id'] = !CLIENT_ID;
+        if (CLIENT_ID) {
+            api.defaults.headers.common['Client-Id'] = CLIENT_ID;
+        } else {
+            throw new Error('Twitch CLIENT_ID not defined')
+        }
     }, [])
 
     return (

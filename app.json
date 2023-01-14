@@ -1,10 +1,10 @@
 {
-  "name": "streamData",
-  "displayName": "streamData",
+  "name": "streamdata",
+  "displayName": "streamdata",
   "expo": {
-    "name": "streamData",
-    "scheme": "streamData",
-    "slug": "streamData",
+    "name": "streamdata",
+    "scheme": "streamdata",
+    "slug": "streamdata",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
